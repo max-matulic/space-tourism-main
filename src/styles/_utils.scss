@@ -1,0 +1,13 @@
+@use "./variables" as *;
+
+.container {
+  padding-inline: $space-800;
+
+  @media screen and (max-width: 768px) {
+    padding-inline: $space-500;
+  }
+
+  @media screen and (max-width: 576px) {
+    padding-inline: $space-300;
+  }
+}

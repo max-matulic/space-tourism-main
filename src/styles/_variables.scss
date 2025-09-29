@@ -1,0 +1,32 @@
+//colors
+
+$blue-900: #0b0d17;
+$blue-300: #d0d6f9;
+$white: #fff;
+
+//spacings
+
+$space-25: 2px;
+$space-50: 4px;
+$space-100: 8px;
+$space-150: 12px;
+$space-200: 16px;
+$space-300: 24px;
+$space-400: 32px;
+$space-500: 40px;
+$space-600: 48px;
+$space-800: 64px;
+$space-1000: 80px;
+$space-1200: 96px;
+$space-1600: 128px;
+
+// breakpoints
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);

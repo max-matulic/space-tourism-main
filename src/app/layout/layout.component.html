@@ -1,0 +1,49 @@
+<nav class="navigation" [ngClass]="{ container: isMobile }">
+  <img src="assets/shared/logo.svg" alt="logo image" />
+  <div
+    class="navigation__wrapper"
+    [ngClass]="{ 'mobile-nav': isClicked && isMobile }"
+  >
+    <img
+      src="assets/shared/icon-close.svg"
+      alt="close icon"
+      class="navigation__close"
+      (click)="onClose()"
+    />
+    <ul class="navigation__links" [ngClass]="{ mobile: isClicked && isMobile }">
+      <li>
+        <a
+          routerLink=""
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          ><span><b>00</b>Home</span></a
+        >
+      </li>
+      <li>
+        <a routerLink="destination" routerLinkActive="active"
+          ><span><b>01</b>Destination</span></a
+        >
+      </li>
+      <li>
+        <a routerLink="crew" routerLinkActive="active"
+          ><span><b>02</b>Crew</span></a
+        >
+      </li>
+      <li>
+        <a routerLink="technology" routerLinkActive="active"
+          ><span><b>03</b>Technology</span></a
+        >
+      </li>
+    </ul>
+  </div>
+  <img
+    src="assets/shared/icon-hamburger.svg"
+    alt="hamburger icon"
+    class="navigation__hamburger"
+    (click)="onOpen()"
+  />
+</nav>
+
+<main>
+  <router-outlet />
+</main>
