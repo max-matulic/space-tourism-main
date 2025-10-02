@@ -11,3 +11,10 @@
     padding-inline: $space-300;
   }
 }
+
+.custom-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: $space-400;
+  justify-content: center;
+}

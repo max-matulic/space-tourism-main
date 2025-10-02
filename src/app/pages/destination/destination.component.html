@@ -1,1 +1,46 @@
-<p>destination works!</p>
+<div class="destination custom-grid">
+  <p class="destination__page-title">
+    <b>01</b><span>PICK YOUR DESTINATION</span>
+  </p>
+  <div class="destination__wrapper">
+    <div class="destination__image">
+      <img
+        src="{{ filteredDestination[0].images.png }}"
+        alt="{{ filteredDestination[0].name }}"
+      />
+    </div>
+    <div class="destination__info">
+      <ul class="destination__list">
+        @for (destination of destinationList; track destination.name) {
+        <li
+          (click)="getDestination(destination.name)"
+          [ngClass]="{
+            active: destination.name === filteredDestination[0].name
+          }"
+        >
+          {{ destination.name.toUpperCase() }}
+        </li>
+        }
+      </ul>
+      <div class="destination__description">
+        <h1 class="destination__title">
+          {{ filteredDestination[0].name.toUpperCase() }}
+        </h1>
+        <p class="destination__text">
+          {{ filteredDestination[0].description }}
+        </p>
+      </div>
+      <hr />
+      <div class="destination__travel-info">
+        <div class="destination__avg-distance">
+          <p>AVG. DISTANCE</p>
+          <p>{{ filteredDestination[0].distance.toUpperCase() }}</p>
+        </div>
+        <div class="destination__travel-time">
+          <p>EST. TRAVEL TIME</p>
+          <p>{{ filteredDestination[0].travel.toUpperCase() }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
