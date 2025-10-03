@@ -1,1 +1,32 @@
-<p>crew works!</p>
+<div class="crew">
+  <div class="custom-grid">
+    <div class="crew__wrapper">
+      <p class="crew__page-title"><b>02</b><span>MEET YOUR CREW</span></p>
+      <div class="crew__info">
+        <div class="crew__desc">
+          <div></div>
+          <div class="crew__text">
+            <h2 class="crew__role">{{ filteredCrew[0].role.toUpperCase() }}</h2>
+            <h1 class="crew__name">{{ filteredCrew[0].name.toUpperCase() }}</h1>
+            <p class="crew__bio">{{ filteredCrew[0].bio }}</p>
+          </div>
+          <div class="crew__pagination">
+            @for (crewMember of crewList; track crewMember.name) {
+            <div
+              class="crew__dot"
+              [ngClass]="{ active: crewMember.name === filteredCrew[0].name }"
+              (click)="getCrew(crewMember.name)"
+            ></div>
+            }
+          </div>
+        </div>
+        <div class="crew__image">
+          <img
+            src="{{ filteredCrew[0].images.webp }}"
+            alt="{{ filteredCrew[0].role }} {{ filteredCrew[0].name }}"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

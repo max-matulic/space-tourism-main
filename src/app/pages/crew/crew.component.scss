@@ -1,0 +1,181 @@
+@use "../../../styles/index" as *;
+
+.crew {
+  @include barlow(18px);
+  min-height: 100vh;
+  background: url("/assets/crew/background-crew-desktop.jpg") no-repeat center
+    center / cover;
+  color: white;
+  padding-inline: $space-800;
+  padding-bottom: $space-600;
+  padding-top: 184px;
+
+  @media screen and (max-width: 768px) {
+    background: url("/assets/crew/background-crew-tablet.jpg") no-repeat center
+      center / cover;
+    padding-inline: $space-500;
+    padding-bottom: 0;
+    padding-top: 136px;
+  }
+
+  @media screen and (max-width: 576px) {
+    background: url("/assets/crew/background-crew-mobile.jpg") no-repeat center
+      center / cover;
+    padding-inline: $space-300;
+    padding-bottom: $space-300;
+  }
+
+  &__wrapper {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+
+  &__page-title {
+    @include barlow-condensed(28px, 4px);
+    margin-bottom: $space-300;
+
+    b {
+      margin-right: $space-300;
+      opacity: 0.25;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+      align-self: center;
+    }
+
+    @media screen and (max-width: 576px) {
+      justify-self: center;
+      font-size: 16px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    gap: $space-400;
+    padding-block: 26px;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      gap: $space-600;
+      padding-block: 0;
+    }
+  }
+
+  &__desc {
+    flex: 1 0 0;
+    max-width: 539px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media screen and (max-width: 768px) {
+      gap: $space-500;
+    }
+  }
+
+  &__role {
+    @include bellefair(32px);
+    color: rgba($color: $white, $alpha: 0.5);
+
+    @media screen and (max-width: 768px) {
+      font-size: 24px;
+    }
+
+    @media screen and (max-width: 576px) {
+      font-size: 18px;
+    }
+  }
+
+  &__name {
+    @include bellefair(56px);
+    margin-block: $space-200 $space-300;
+
+    @media screen and (max-width: 768px) {
+      font-size: 40px;
+    }
+
+    @media screen and (max-width: 576px) {
+      font-size: 24px;
+    }
+  }
+
+  &__bio {
+    color: $blue-300;
+
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+    }
+
+    @media screen and (max-width: 576px) {
+      font-size: 15px;
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    gap: $space-500;
+    align-self: start;
+
+    @media screen and (max-width: 768px) {
+      gap: $space-200;
+      align-self: center;
+    }
+  }
+
+  &__dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgba($color: $white, $alpha: 0.17);
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgba($color: $white, $alpha: 0.5);
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  &__image {
+    max-width: 514px;
+
+    @media screen and (max-width: 768px) {
+      width: 367px;
+      height: 460px;
+      overflow: hidden;
+      position: fixed;
+      bottom: 0;
+    }
+
+    @media screen and (max-width: 576px) {
+      width: 100%;
+      position: relative;
+      overflow: visible;
+      height: auto;
+      padding-inline: $space-400;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.active {
+  &.active {
+    &.active {
+      background-color: $white;
+
+      &:hover {
+        background-color: $white;
+      }
+    }
+  }
+}

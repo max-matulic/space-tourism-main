@@ -17,4 +17,8 @@
   grid-template-columns: repeat(12, 1fr);
   column-gap: $space-400;
   justify-content: center;
+
+  @media screen and (max-width: 576px) {
+    display: flex;
+  }
 }

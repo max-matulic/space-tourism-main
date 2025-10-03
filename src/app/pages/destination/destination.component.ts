@@ -1,7 +1,7 @@
 import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { destinations } from '../../../data/data.json';
-import { Destination } from './models/destination.interface';
+import { Destination } from './model/destination.interface';
 @Component({
   selector: 'app-destination',
   imports: [NgClass],
